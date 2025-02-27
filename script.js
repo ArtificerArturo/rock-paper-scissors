@@ -25,59 +25,59 @@ function getHumanChoice() {
     }
 }
 
-let humanScore=0
-let computerScore=0
-
-function playRound(humanChoice, computerChoice) {
-    switch(humanChoice) {
-        case "rock":
-            if(computerChoice=="rock") {
-                console.log("Tie")                
-            } else if(computerChoice=="paper") {
-                console.log("You lose")
-                computerScore += 1
-            } else {
-                console.log("You win")
-                humanScore += 1
-            }
-            break
-        case "paper":
-            if(computerChoice=="rock") {
-                console.log("You win") 
-                humanScore += 1               
-            } else if(computerChoice=="paper") {
-                console.log("Tie") 
-            } else {
-                console.log("You lose")
-                computerScore += 1
-            }
-            break      
-                case "paper":
-            if(computerChoice=="rock") {
-                console.log("You win") 
-                humanScore += 1               
-            } else if(computerChoice=="paper") {
-                console.log("Tie") 
-            } else {
-                console.log("You lose")
-                computerScore += 1
-            }
-            break   
-            case "scissors":
-                if(computerChoice=="rock") {
-                    console.log("You lose")
-                    computerScore += 1             
-                } else if(computerChoice=="paper") {
-                    console.log("You win") 
-                    humanScore += 1   
-                } else {
-                    console.log("Tie") 
-                }
-                                     
-    }
-}
-
 function playGame() {
+    let humanScore=0
+    let computerScore=0
+
+    function playRound(humanChoice, computerChoice) {
+        switch(humanChoice) {
+            case "rock":
+                if(computerChoice=="rock") {
+                    console.log("Tie")                
+                } else if(computerChoice=="paper") {
+                    console.log("You lose")
+                    computerScore += 1
+                } else {
+                    console.log("You win")
+                    humanScore += 1
+                }
+                break
+            case "paper":
+                if(computerChoice=="rock") {
+                    console.log("You win") 
+                    humanScore += 1               
+                } else if(computerChoice=="paper") {
+                    console.log("Tie") 
+                } else {
+                    console.log("You lose")
+                    computerScore += 1
+                }
+                break      
+                    case "paper":
+                if(computerChoice=="rock") {
+                    console.log("You win") 
+                    humanScore += 1               
+                } else if(computerChoice=="paper") {
+                    console.log("Tie") 
+                } else {
+                    console.log("You lose")
+                    computerScore += 1
+                }
+                break   
+                case "scissors":
+                    if(computerChoice=="rock") {
+                        console.log("You lose")
+                        computerScore += 1             
+                    } else if(computerChoice=="paper") {
+                        console.log("You win") 
+                        humanScore += 1   
+                    } else {
+                        console.log("Tie") 
+                    }
+                                        
+        }
+    }
+
     for (i=0;i<5;i++) {
         playRound(getHumanChoice(),getComputerChoice())
     }
@@ -85,5 +85,5 @@ function playGame() {
     console.log("human score ",humanScore)
     console.log("computer score", computerScore)
 }
-playGame()
 
+playGame()
